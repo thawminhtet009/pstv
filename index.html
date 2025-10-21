@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>App Download Info</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial}
+    body{margin:0;min-height:100vh;background:linear-gradient(180deg,#071022 0%, #0b1220 100%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{width:100%;max-width:920px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:22px;box-shadow:0 10px 30px rgba(2,6,23,0.6);display:grid;grid-template-columns:120px 1fr 260px;gap:18px;align-items:center}
+    .app-icon{width:110px;height:110px;border-radius:22px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#021026}
+    .meta h1{margin:0;font-size:20px}
+    .meta p{color:var(--muted);margin:6px 0 0}
+    .badges{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .badge{padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px}
+    .right{display:flex;flex-direction:column;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));cursor:pointer;text-decoration:none;color:inherit;justify-content:center}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021026;font-weight:600;border:none}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+    .btn svg{width:18px;height:18px}
+    .small{font-size:13px;color:var(--muted)}
+    .links{display:flex;flex-direction:column;gap:10px}
+    .center{display:flex;flex-direction:column;gap:8px}
+    .hint{font-size:13px;color:var(--muted)}
+    @media (max-width:840px){.card{grid-template-columns:1fr;max-width:680px}.right{order:3}.app-icon{margin:0 auto}.meta{order:2;text-align:center}}
+  </style>
+</head>
+<body>
+  <div class="card" id="download-card">
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:center;">
+      <div class="app-icon" id="app-icon">APP</div>
+      <div class="small hint">Version <strong id="app-version">1.0.0</strong></div>
+    </div>
+
+    <div class="meta">
+      <h1 id="app-title">PS Tv App</h1>
+      <p id="app-desc">Cosplayer (only Fans) Video & ပုံများနဲ့ Hentai Mm Subများအခမဲ့ကြည့်ရှုလို့ရမည့်Appလေးပါ</p>
+      <div class="badges">
+        <div class="badge" id="rating">⭐ 4.8</div>
+        <div class="badge" id="size">98 MB</div>
+        <div class="badge" id="category">Productivity</div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <a class="btn primary" id="android-btn" href="#" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 9v6a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5V9"></path><path d="M7 4l1.5 3"></path><path d="M17 4l-1.5 3"></path></svg>
+          Android (APK)
+        </a>
+
+        <a class="btn ghost" id="ios-btn" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.365 1.43c-.78.93-1.59 1.28-2.25 1.28-.65 0-1.49-.38-2.26-1.32C10.02.86 8.86.16 7.56.83c-1.75.86-2.4 3.1-2.4 3.1C3.2 8.5 5.28 11 5.9 11.8c.6.78 1.55 1.48 2.96 1.45 1.42-.03 1.94-.7 3.28-.7 1.33 0 1.86.7 3.28.7 1.4.03 2.36-.67 2.96-1.45.62-.78 2.7-3.3.74-6.97 0 0-1.16-2.24-2.7-3.25z"></path></svg>
+          iOS / Website
+        </a>
+      </div>
+      <div style="margin-top:12px">
+        <div class="small hint">Updateတွေသိရဖို့Telegram Channelများကို Joinပေးထားကျပါ။Logincodeများကိုအောက်ပါတွင်ယူပါရန်။</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="center" style="align-items:flex-end">
+        <div class="small hint">Downloads</div>
+        <div style="font-size:22px;font-weight:700" id="download-count">12,340</div>
+        <div class="small hint">Updated: <span id="updated-date">2025-10-20</span></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="links">
+          <a class="btn" id="open-store" href="#">Free Login Codeယူရန်</a>
+          <a class="btn" id="direct-link" href="#">Premium Codeဝယ်ယူရန်</a>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a class="btn primary" href="https://t.me/shinoero" target="_blank">Cosplayer Channel</a>
+          <a class="btn ghost" href="https://t.me/pixeldarkside" target="_blank">Hentai Mm Sub Channel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const androidBtn = document.getElementById('android-btn');
+    const iosBtn = document.getElementById('ios-btn');
+    const directLink = document.getElementById('direct-link');
+    const openStore = document.getElementById('open-store');
+
+    const CONFIG = {
+      apk: 'https://example.com/downloads/myapp.apk',
+      ios: 'https://apps.apple.com/app/idXXXXXXXXX',
+      web: 'https://example.com/app',
+      store: 'https://example.com/store'
+    };
+
+    androidBtn.href = CONFIG.apk;
+    iosBtn.href = CONFIG.ios;
+    directLink.href = CONFIG.web;
+    openStore.href = CONFIG.store;
+
+    function isIOS(){ return /iphone|ipad|ipod/i.test(navigator.userAgent); }
+    iosBtn.addEventListener('click', (e)=>{
+      if(isIOS()){
+        e.preventDefault();
+        const r = confirm('iOS ကနေ အသုံးပြုမယ်ဆိုလျှင် App Store သို့ ရောက်ရန် OK ကိုနှိပ်ပါ၊ Web App အဖြစ် ထည့်ချင်ရင် Cancel ကိုနှိပ်ပါ');
+        if(r){ window.open(CONFIG.ios, '_blank'); } else { window.open(CONFIG.web, '_blank'); }
+      }
+    });
+  </script>
+</body>
+</html>
